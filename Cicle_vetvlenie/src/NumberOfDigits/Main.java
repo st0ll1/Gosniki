@@ -13,25 +13,25 @@ public class Main {
         Integer digit = 0;
         try {
             // Вводим число в котором считаем количество цифр
-             digit = Integer.parseInt(JOptionPane.showInputDialog("Введите число"));
+            digit = Integer.parseInt(JOptionPane.showInputDialog("Введите число"));
 
         } catch (NumberFormatException ex) {
-            JOptionPane.showMessageDialog(null,"Число введено неверно " + ex,
+            JOptionPane.showMessageDialog(null, "Число введено неверно " + ex,
                     "Ошибка", JOptionPane.ERROR_MESSAGE);
             System.exit(0);
         }
 
         // Здесь сам алгоритм
         while ((digit /= 10) > 0) {
-            if(digit>(Math.pow(10, 9))) {
-                JOptionPane.showMessageDialog(null,"Число больше максимально допустимого",
+            if (digit > (Math.pow(10, 9))) {
+                JOptionPane.showMessageDialog(null, "Число больше максимально допустимого",
                         "Ошибка", JOptionPane.ERROR_MESSAGE);
                 System.exit(0);
             }
             number++;
         }
         // Выводим в графическое окно результат
-        JOptionPane.showMessageDialog(null,"Количество цифр в числе: "+number,
+        JOptionPane.showMessageDialog(null, "Количество цифр в числе: " + number,
                 "Количество цифр в числе", JOptionPane.PLAIN_MESSAGE);
     }
 }
