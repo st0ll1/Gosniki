@@ -27,7 +27,7 @@ public class MaxNumber {
 
 /* -------------------------------------- Ввод элементов последовательности ---------------------------------------- */
         boolean flag = false;                          // флаг наличия отрицательного числа в последовательности
-        int[] arrayInt = new int[quantity];
+        int[] arrayInt = new int[quantity];            // добавим массив для хранения отрицательных чисел
 
         for (int i = 0; i < quantity; i++) {
             System.out.print("Введите число: ");
