@@ -21,6 +21,7 @@ public class NumberOperation {
         Double lastOperand = Double.parseDouble(strOperation[2]);
 
         // Форматированная строка вывода
+        // Сдесь ПОКА НЕ ДОДЕЛАНО - операция не верная
         String outString = String.format("%s %s %s = %.2f", firsOperand, strOperation[1],lastOperand,
                 (firsOperand+lastOperand));
 
