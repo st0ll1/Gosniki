@@ -49,7 +49,7 @@ public class MaxNumber {
         for (int i = 0; i < arrayInt.length; i++) {
             if(arrayInt[i] == 0) {
                 continue;
-            } else if (arrayInt[i] > minNumber)
+            } else if (arrayInt[i] >= minNumber)
                 maxNumber = arrayInt[i];
                 minNumber = arrayInt[i];
         }
