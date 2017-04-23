@@ -32,7 +32,7 @@ public class MaxNumber {
         for (int i = 0; i < quantity; i++) {
             System.out.print("Введите число: ");
             number = input.nextInt();
-            if (number < 0 ) {                          // && number > minNumber
+            if (number < 0) {                          // && number > minNumber
                 flag = true;
                 arrayInt[i] = number;
             }
@@ -47,11 +47,11 @@ public class MaxNumber {
 
         int maxNumber = minNumber;
         for (int i = 0; i < arrayInt.length; i++) {
-            if(arrayInt[i] == 0) {
+            if (arrayInt[i] == 0) {
                 continue;
             } else if (arrayInt[i] >= maxNumber)
                 maxNumber = arrayInt[i];
-                //minNumber = arrayInt[i];
+            //minNumber = arrayInt[i];
         }
         System.out.println("Максимальное неположительное число в последовательности: "
                 + maxNumber);
