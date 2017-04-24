@@ -1,4 +1,4 @@
-package Array;
+package Task2.ArraySumInteger;
 
 import java.util.Scanner;
 
@@ -12,7 +12,7 @@ public class ArraySumInt {
         Scanner input = new Scanner(System.in);
         System.out.print("Введите количество элементов в массиве: ");
         int N = input.nextInt();            // Количество элементов в массиве
-        int[] array = new int[N];
+        int[] array = new int[N];           // массив положительных чисел
 
         // заполним массив
         for(int i = 0; i<N; i++) {
@@ -24,7 +24,7 @@ public class ArraySumInt {
 
         for (int i = 0; i < N; i++) {
             if ((array[i] > 0) && (array[i] % 2) == 0) {
-                    count++;
+                count++;
             }
         }
 

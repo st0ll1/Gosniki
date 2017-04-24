@@ -1,4 +1,4 @@
-package OperationsOnNumbers;
+package Task1.OperationsOnNumbers;
 
 import javax.swing.*;
 

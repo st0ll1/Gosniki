@@ -1,4 +1,4 @@
-package NumberOfDigits;
+package Task1.NumberOfDigits;
 
 import javax.swing.JOptionPane;
 
