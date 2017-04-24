@@ -1,7 +1,6 @@
-package Task2.ArraySumInteger;
+package Task2.ArraySumIntegerEven;
 
 import java.util.Scanner;
-
 /*
  * Дан одномерный массив из не более чем 20 целых чисел. Написать программу,
  * вычисляющую количество чётных положительных элементов в этом массиве.*/
@@ -11,8 +10,8 @@ public class ArraySumInt {
 
         Scanner input = new Scanner(System.in);
         System.out.print("Введите количество элементов в массиве: ");
-        int N = input.nextInt();            // Количество элементов в массиве
-        int[] array = new int[N];           // массив положительных чисел
+        final int N = input.nextInt();        // Количество элементов в массиве
+        int[] array = new int[N];             // массив положительных чисел
 
         // заполним массив
         for(int i = 0; i<N; i++) {
