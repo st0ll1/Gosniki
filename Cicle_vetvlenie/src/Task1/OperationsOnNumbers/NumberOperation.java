@@ -14,35 +14,40 @@ public class NumberOperation {
 
         str = JOptionPane.showInputDialog(null, "Введите выражение",
                 "Ввод операции", JOptionPane.PLAIN_MESSAGE);
+        str = str.trim();                   // удалить пробелы с краев
 
         String [] strOperation = str.split(" ");
 
         Double firsOperand = Double.parseDouble(strOperation[0]);
         Double lastOperand = Double.parseDouble(strOperation[2]);
 
-        // Форматированная строка вывода
-        // Сдесь ПОКА НЕ ДОДЕЛАНО - операция не верная
-        String outString = String.format("%s %s %s = %.2f", firsOperand, strOperation[1],lastOperand,
-                (firsOperand+lastOperand));
 
         switch (strOperation[1]) {
             case "+" :
+                String outString = String.format("%s %s %s = %.2f", firsOperand, strOperation[1],lastOperand,
+                        (firsOperand+lastOperand));
                 JOptionPane.showMessageDialog(null,outString, "Результа вычислений",
                         JOptionPane.PLAIN_MESSAGE);
                 break;
 
             case "-" :
-                JOptionPane.showMessageDialog(null,outString, "Результа вычислений",
+                String outString1 = String.format("%s %s %s = %.2f", firsOperand, strOperation[1],lastOperand,
+                        (firsOperand-lastOperand));
+                JOptionPane.showMessageDialog(null,outString1, "Результа вычислений",
                         JOptionPane.PLAIN_MESSAGE);
                 break;
 
             case "/" :
-                JOptionPane.showMessageDialog(null,outString, "Результа вычислений",
+                String outString2 = String.format("%s %s %s = %.2f", firsOperand, strOperation[1],lastOperand,
+                        (firsOperand/lastOperand));
+                JOptionPane.showMessageDialog(null,outString2, "Результа вычислений",
                         JOptionPane.PLAIN_MESSAGE);
                 break;
 
             case "*" :
-                JOptionPane.showMessageDialog(null,outString, "Результа вычислений",
+                String outString3 = String.format("%s %s %s = %.2f", firsOperand, strOperation[1],lastOperand,
+                        (firsOperand*lastOperand));
+                JOptionPane.showMessageDialog(null,outString3, "Результа вычислений",
                         JOptionPane.PLAIN_MESSAGE);
                 break;
 
@@ -50,7 +55,6 @@ public class NumberOperation {
                 JOptionPane.showMessageDialog(null,"Неизвестная операция!!!", "Error!!!",
                         JOptionPane.ERROR_MESSAGE);
                 break;
-
         }
     }
 }
