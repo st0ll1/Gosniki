@@ -8,8 +8,8 @@ package Task3.FillInArray;
 public class FillArray {
     public static void main(String[] args) {
 
-        int N = 3;
-        int M = 3;
+        int N = 10;
+        int M = 10;
         int number = 1;
         int[][] twoMatrix = new int[N][M];
 
@@ -18,14 +18,15 @@ public class FillArray {
             for (int j = 0; j < M; j++) {
                 twoMatrix[i][j] = number++;
             }
-            number = number - 2;
+//            number = number - 2;
+            number = number - (N - 1);
         }
 
         // выведем матрицу
         for (int i = 0; i < N; i++) {
             System.out.println();
             for (int j = 0; j < M; j++) {
-                System.out.print(twoMatrix[i][j]);
+                System.out.print(twoMatrix[i][j] + " ");
             }
         }
     }
