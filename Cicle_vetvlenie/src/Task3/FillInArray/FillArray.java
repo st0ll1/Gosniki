@@ -18,7 +18,7 @@ public class FillArray {
             for (int j = 0; j < M; j++) {
                 twoMatrix[i][j] = number++;
             }
-            number = number -2;
+            number = number - 2;
         }
 
         // выведем матрицу
