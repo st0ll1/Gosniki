@@ -13,7 +13,7 @@ public class MinElementInString {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
-        double minElement;                     // максимальный и минимальный элемент
+        double minElement;                                  // минимальный элемент в строке
 
 
         // Ввод размеров матрицы
@@ -43,7 +43,6 @@ public class MinElementInString {
         }
 
         // найдем минимальный элемент в строках матрицы
-
         for (int i = 0; i < N; i++) {
             minElement = matrix[i][0];
             for (int j = 0; j < M; j++) {
