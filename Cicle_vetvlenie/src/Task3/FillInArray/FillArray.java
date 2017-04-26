@@ -19,7 +19,7 @@ public class FillArray {
                 twoMatrix[i][j] = number++;
             }
 //            number = number - 2;
-            number = number - (N - 1); //
+            number = number - (N - 1);
         }
 
         // выведем матрицу
