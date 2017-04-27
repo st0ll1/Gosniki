@@ -1,4 +1,4 @@
-package Task4.FuncSumElemArray;
+package Task4_Function.FuncSumElemArray;
 
 /**
  * st0ll1

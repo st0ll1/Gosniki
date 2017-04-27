@@ -1,4 +1,4 @@
-package Task1.MaxNegativeNumber;
+package Task1_Branches_Cicles.MaxNegativeNumber;
 
 import java.util.Scanner;
 

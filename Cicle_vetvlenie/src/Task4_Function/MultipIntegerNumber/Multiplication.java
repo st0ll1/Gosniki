@@ -1,4 +1,4 @@
-package Task4.MultipIntegerNumber;
+package Task4_Function.MultipIntegerNumber;
 
 /**
  * st0ll1

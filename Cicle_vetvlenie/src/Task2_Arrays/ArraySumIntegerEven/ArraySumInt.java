@@ -1,4 +1,4 @@
-package Task2.ArraySumIntegerEven;
+package Task2_Arrays.ArraySumIntegerEven;
 
 import java.util.Scanner;
 /*

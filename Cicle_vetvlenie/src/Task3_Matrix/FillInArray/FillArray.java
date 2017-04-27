@@ -1,4 +1,4 @@
-package Task3.FillInArray;
+package Task3_Matrix.FillInArray;
 
 /**
  * st0ll1

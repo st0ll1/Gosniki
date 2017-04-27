@@ -1,4 +1,4 @@
-package Task3.SummElemMainDiagonalMatrix;
+package Task3_Matrix.SummElemMainDiagonalMatrix;
 
 /**
  * st0ll1

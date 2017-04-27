@@ -1,4 +1,4 @@
-package Task2.ArraySumDoubleAbs;
+package Task2_Arrays.ArraySumDoubleAbs;
 
 import java.util.Scanner;
 

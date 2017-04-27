@@ -1,4 +1,4 @@
-package Task3.MinElementString;
+package Task3_Matrix.MinElementString;
 
 import java.util.Arrays;
 import java.util.Scanner;
