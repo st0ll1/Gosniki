@@ -24,6 +24,13 @@ public class Programm {
         obj.multiplyMatrix();
         obj.display();
 
+        System.out.println();
+
+        System.out.println("Результат сложения матриц");
+        obj.sumMatrix();
+        obj.display();
+
+
 
     }
 }
