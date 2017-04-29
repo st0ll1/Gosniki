@@ -83,6 +83,27 @@ public class MatrixClass {
 
 
     /**
+     * Вычитание матриц.
+     * Ограничение: Складывать можно только матрицы одинакового размера.
+     * @return Возвращает результирующую матрицу
+     */
+    public int[][] subtrMatrix() {
+        // проверка ограничения
+        if ((rowA == rowB) && (columnA == columnB)) {
+            for (int i = 0; i < rowA; i++) {
+                for (int j = 0; j < columnB; j++) {
+                    resultMutrix[i][j] = matrixA[i][j] - matrixB[i][j];
+                }
+            }
+        } else {
+            System.out.println("Матрицы не одинакового размера");
+            System.exit(0);
+        }
+        return resultMutrix;
+    }
+
+
+    /**
      * Вывод результирующей матрицы на экран
      */
     public void display() {
