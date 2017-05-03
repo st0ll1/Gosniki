@@ -1,4 +1,4 @@
-package Task_6_Interface.VectorVersion2;
+package Task_6_Interface.Vector_SimpleImplementation;
 
 /**
  * st0ll1

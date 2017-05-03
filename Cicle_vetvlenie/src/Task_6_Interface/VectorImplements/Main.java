@@ -24,23 +24,23 @@ public class Main {
 
 
         System.out.println("Умножение вектора на число");
-        double[] vector5 = Vector.multElementVectors(obj5, 2.0);
-        for (double elem : vector5) {
+        IVector resultMultObject = obj5.multElementVectors(2.0);
+        for (double elem : resultMultObject.getVector()) {
             System.out.print(elem + " ");
         }
         System.out.println();
 
 
-        double[] vector3 = Vector.sumVectors(obj, obj1);
+        IVector resultSumVectors = Vector.sumVectors(obj, obj1);
         System.out.println("Результат сложения двух векторов: ");
-        for (double elem : vector3) {
+        for (double elem : resultSumVectors.getVector()) {
             System.out.print(elem + " ");
         }
 
         System.out.println();
         System.out.println("Сумма элементов векторов равна: ");
-        double[] vector4 = Vector.sumElementVectors(obj, obj1);
-        for (double elem : vector4) {
+        IVector resultSumElementVectors = Vector.sumElementVectors(obj, obj1);
+        for (double elem : resultSumElementVectors.getVector()) {
             System.out.print(elem + " ");
         }
     }
