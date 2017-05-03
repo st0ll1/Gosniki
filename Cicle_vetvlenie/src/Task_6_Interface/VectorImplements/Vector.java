@@ -17,6 +17,16 @@ public class Vector implements IVector {
         this.vector = vector;
     }
 
+    // копирующий конструктор
+    public Vector(Vector obj) {
+        this.vector = obj.vector;
+    }
+
+    // метод копирующий объект
+    public Vector copy() {
+        return new Vector(this);
+    }
+
     @Override
     public void setVector(double[] vector) {
         this.vector = vector;
@@ -37,15 +47,14 @@ public class Vector implements IVector {
      *
      * @param vector1
      * @param vector2
-     * @return Результирующий вектор
+     * @return Результирующий объект вектора
      */
-    public static double[] sumVectors(IVector vector1, IVector vector2) {
+    public static IVector sumVectors(IVector vector1, IVector vector2) {
         double[] resultVector = new double[vector1.size() + vector2.size()];
         System.arraycopy(vector1.getVector(), 0, resultVector, 0, vector1.size());
         System.arraycopy(vector2.getVector(), 0, resultVector, vector1.size(), vector2.size());
-        return resultVector;
+        return new Vector(resultVector);
     }
-
 
     /**
      * Складывает элементы двух векторов
@@ -79,5 +88,4 @@ public class Vector implements IVector {
         }
         return resultVector;
     }
-
 }
