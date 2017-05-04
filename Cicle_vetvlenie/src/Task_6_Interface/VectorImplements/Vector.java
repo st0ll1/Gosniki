@@ -23,9 +23,9 @@ public class Vector implements IVector {
     }
 
     // метод копирующий объект
-//    public Vector copy() {
-//        return new Vector(this);
-//    }
+    //    public Vector copy() {
+    //        return new Vector(this);
+    //    }
 
     /* ----------------------------------------------- Сеттеры,геттеры --------------------------------------------- */
     @Override
@@ -94,7 +94,7 @@ public class Vector implements IVector {
 
     /** Умножение вектора на число
      * @param number
-     * @return Массив double элементы которого умножены на число
+     * @return Объект типа IVector поле вектор которого умножено на число
      */
     @Override
     public IVector multElementVectors(double number) {
