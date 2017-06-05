@@ -27,15 +27,16 @@ public class MaxNumber {
 
 /* -------------------------------------- Ввод элементов последовательности ---------------------------------------- */
         boolean flag = false;                          // флаг наличия отрицательного числа в последовательности
-        
+        int counter = 0;                               // счетчик отрицательных чисел
         // добавим массив для хранения отрицательных чисел
         ArrayList<Integer> arrayInteger = new ArrayList<Integer>(quantity);
-        
+
         for (int i = 0; i < quantity; i++) {
             System.out.print("Введите число: ");
             number = input.nextInt();
-            if (number < 0) {                          // && number > minNumber
-                arrayInteger.ensureCapacity(i+1);
+            if (number < 0) {                           // если число отрицательное
+                counter++;                              // увеличим счетчик на 1
+                arrayInteger.ensureCapacity(counter);   // изменим емкость массива
                 flag = true;
                 arrayInteger.add(number);
             }
@@ -54,7 +55,6 @@ public class MaxNumber {
                 continue;
             } else if (arrayInteger.get(i) >= maxNumber)
                 maxNumber = arrayInteger.get(i);
-            //minNumber = arrayInt[i];
         }
         System.out.println("Максимальное неположительное число в последовательности: "
                 + maxNumber);
