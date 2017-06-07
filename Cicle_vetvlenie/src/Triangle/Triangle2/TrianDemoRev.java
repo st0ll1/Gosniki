@@ -1,21 +1,21 @@
-package Triangle.ReverseTriangle;
+package Triangle.Triangle2;
 
 /**
- * Треугольник с вершиной внизу
+ * Косынка с вершиной внизу по убыванию
  */
-public class ReversTrianDemo {
+public class TrianDemoRev {
     public static void main(String[] args) {
         int n = 5;
         for (int i = n; i >= 1; i--) {
-
             for (int j = 1; j <= n - i; j++) {
                 System.out.print(" ");
             }
 
-            for (int j = 1; j <= 2 * i - 1; j++) {
+            for (int j = 1; j <= i; j++) {
                 System.out.print("*");
             }
             System.out.println();
         }
     }
+
 }
