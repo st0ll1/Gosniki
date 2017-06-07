@@ -11,6 +11,11 @@ public class ArraySumInt {
         Scanner input = new Scanner(System.in);
         System.out.print("Введите количество элементов в массиве: ");
         final int N = input.nextInt();        // Количество элементов в массиве
+        if (N > 20) {
+            System.out.println("Количество элементов превышает" +
+                    "максимально допустимый размер");
+            System.exit(0);
+        }
         int[] array = new int[N];             // массив положительных чисел
 
         // заполним массив
