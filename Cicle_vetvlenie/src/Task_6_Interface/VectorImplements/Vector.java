@@ -104,4 +104,17 @@ public class Vector implements IVector {
         }
         return new Vector(resultVector);
     }
+
+    // скалярное произведение двух векторов
+    public double scalarMultVectors(IVector obj) {
+        double[] tmpArray = new double[vector.length];
+        double scalMult = 0.0;              // переменная для скалярного произведения
+        for (int i = 0; i < tmpArray.length; i++) {
+            tmpArray[i] = this.vector[i] * obj.getVector()[i];
+        }
+        for (double tmp : tmpArray) {
+            scalMult += tmp;
+        }
+        return scalMult;
+    }
 }
