@@ -13,7 +13,7 @@ public class MatrixClass {
     private int columnB;
     private int columnA;
     private int inner;
-    private int resultMutrix[][];
+    private int resultMatrix[][];
 
 
     public MatrixClass(int[][] matrixA, int[][] matrixB) {
@@ -24,7 +24,7 @@ public class MatrixClass {
         columnA = matrixA[0].length;                         // количество столбцов матрицы A
         columnB = matrixB[0].length;                         // количество столбцов матрицы B
         inner = matrixB.length;                              // количество строк матрицы B (или столбцов в A)
-        resultMutrix = new int[rowA][columnB];
+        resultMatrix = new int[rowA][columnB];
     }
 
 
@@ -44,21 +44,22 @@ public class MatrixClass {
      * количеству строк второй матрицы
      * @return Возвращает результирующую матрицу
      */
-    public int[][] multiplyMatrix() {
+    public int[][] multiplyMatrix() throws ArithmeticException {
         if (columnA == rowB ) {
             for (int i = 0; i < rowA; i++) {
                 for (int j = 0; j < columnB; j++) {
                     // Умножим строку матрицы matrixA на столбец матрицы matrixB
                     for (int k = 0; k < inner; k++) {
-                        resultMutrix[i][j] += matrixA[i][k] * matrixB[k][j];
+                        resultMatrix[i][j] += matrixA[i][k] * matrixB[k][j];
                     }
                 }
             }
         } else {
             System.out.println("Количество столбцов матрицы A не соответствует количеству строк матрицы B");
-            System.exit(0);
+            //System.exit(0);
+            throw new ArithmeticException();
         }
-        return resultMutrix;
+        return resultMatrix;
     }
 
     /**
@@ -66,19 +67,20 @@ public class MatrixClass {
      * Ограничение: Складывать можно только матрицы одинакового размера.
      * @return Возвращает результирующую матрицу
      */
-    public int[][] sumMatrix() {
+    public int[][] sumMatrix() throws ArithmeticException {
         // проверка ограничения
         if ((rowA == rowB) && (columnA == columnB)) {
             for (int i = 0; i < rowA; i++) {
                 for (int j = 0; j < columnB; j++) {
-                    resultMutrix[i][j] = matrixA[i][j] + matrixB[i][j];
+                    resultMatrix[i][j] = matrixA[i][j] + matrixB[i][j];
                 }
             }
         } else {
             System.out.println("Матрицы не одинакового размера");
-            System.exit(0);
+            throw new ArithmeticException();
+            //System.exit(0);
         }
-        return resultMutrix;
+        return resultMatrix;
     }
 
 
@@ -92,14 +94,15 @@ public class MatrixClass {
         if ((rowA == rowB) && (columnA == columnB)) {
             for (int i = 0; i < rowA; i++) {
                 for (int j = 0; j < columnB; j++) {
-                    resultMutrix[i][j] = matrixA[i][j] - matrixB[i][j];
+                    resultMatrix[i][j] = matrixA[i][j] - matrixB[i][j];
                 }
             }
         } else {
             System.out.println("Матрицы не одинакового размера");
-            System.exit(0);
+            throw new ArithmeticException();
+            //System.exit(0);
         }
-        return resultMutrix;
+        return resultMatrix;
     }
 
 
@@ -108,12 +111,11 @@ public class MatrixClass {
      */
     public void display() {
         // Выводим результирующую матрицу
-        for (int i = 0; i < resultMutrix.length; i++) {
-            for (int j = 0; j < resultMutrix[0].length; j++) {
-                System.out.format("%6d", resultMutrix[i][j]);
+        for (int i = 0; i < resultMatrix.length; i++) {
+            for (int j = 0; j < resultMatrix[0].length; j++) {
+                System.out.format("%6d", resultMatrix[i][j]);
             }
             System.out.println();
         }
     }
-
 }
